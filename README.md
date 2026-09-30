@@ -88,10 +88,13 @@ In order to make that happen:
 
 I'm going to write the script, put it in the /config folder, and then come back here. See you soon, dear reader!
 
+The script is there now. It's all set up in Termux, and there's a copy in the config folder.
+The thing is, the bash script as it is now is just a text file. Termux doesn't know that it's supposed to be read as instructions (executed). There is a quick fix to that in Linux/Termux. The command is "chmod +x (your file here)." "chmod" stands for "change mode", and the +x says to make it executable (readable as instructions).
 
-*A webserver is *
 
 ****5. Accessing and Testing****
+It should all be good to go. I have all the files. I have the script that runs the website. Termux knows it's a script.
+
 
     Browsing Offline:
 
