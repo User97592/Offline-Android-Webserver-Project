@@ -1,1 +1,4 @@
-
+#!/bin/bash
+echo "Starting 5e.tools local web server"
+cd ~/storage/shared/Download/5etools
+python3 -m http.server 8080
