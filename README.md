@@ -19,6 +19,15 @@ I used generative AI to help me create this project documentation. The ideas and
 
         Personal PC with Linux Mint 22.3
 
+In short, here are the steps:
+1. Set up Termux so I can run bash scripts on my Android phone
+2. Get the website (5e.tools) files downloaded onto my phone and unzip them
+3. Make a bash script in Termux that finds the files and turns them into a website
+4. Use my browser to visit the website I just set up
+5. Document it all!
+6. Enjoy my brand-new personal website
+
+
 *I already did this project once with a moto e5 play, a much weaker phone from 2018. However, that was a long time ago, and that phone mysteriously stopped rebooting sometime in September 2026. So, to refresh my memory and to have a working version, I'm going to do it again!*
 
 *Also, 5e.tools is a very cool website for anyone who plays D&D 5e! Make sure to use an adblocker if you visit, or host it yourself like I do!*
@@ -28,7 +37,7 @@ I used generative AI to help me create this project documentation. The ideas and
 
 Preparing the Moto G Power:
    Installing and updating Termux.
-        Termux is a program that lets me use a bash shell on an Android phone. Bash is the text language that Linux uses, so Termux essentially lets me use my
+Termux is a program that lets me use a bash shell on an Android phone. Bash is the text language that Linux uses, so Termux essentially lets me use my
         Android phone like a mini Linux computer.
         I already have Termux installed on this phone from a previous project. All I needed to do to make sure it's up-to-date is to run the command "pkg update".
         Termux uses pkg as its package manager, unlike other versions of Linux/bash that use snap, apt, yum and others.
@@ -55,19 +64,29 @@ I know Termux can access my Downloads folder. I also know that there's all kinds
 My phone's Files app can see all the files, but Termux just lists it as one zip file. I need Termux to see everything in the zip file, so I need to unzip it inside Termux. This requires a command called "unzip". I know, very creative name. Termux doesn't have it by default, so I'll run the install command to see if I installed it before.
 I got the result "0 upgraded, 0 newly installed, 0 to remove and 71 not upgraded" when I told Termux to install unzip. That means that nothing changed, which means that I already have unzip installed. Nice.
 Now to unzip the files. I'll let you know how it goes, dear reader.
-I'm seeing a lot of audio files. I don't remember audio files in this website. But every file in the website is now flashing across my phone screen, which means it's all working.
+
+*I'm seeing a lot of audio files. I don't remember audio files in this website. But every file in the website is now flashing across my phone screen, which means it's all working.*
+
+Unzipping the files absolutely worked. We're in business, dear reader.
 
 *It's worth noting that I don't have the most recent version of 5etools on hand. I have v2.28.1, and the current version is 2.36.something.*
 
 ****4. Configuring the Web Server****
+We're nearly there.
+All I need to do is tell Termux how to run the website. It already has all the stuff it needs, just not the instructions.
+In order to do this, I'm going to do some light scripting.
 
-    Setting up Termux:
+*Scripting is different from programming. Scripting is chaining together a bunch of pre-existing commands in a file and then running that file. It's automation. Programming is about solving problems and making things with computer software and languages like python.*
 
-        Navigating to the website directory.
+Here's what the script is going to do:
+- Tell bash (Termux) to run a webserver with my 5etools files
 
-        Launching the local server command.
+In order to make that happen:
+- The script needs to know where the website files live.
+- The script needs to go there and start a webserver in that folder.
+- The script needs to assign an IP address that I can access from my phone's browser.
 
-        Binding to localhost (127.0.0.1) on a specified port.
+*A webserver is *
 
 ****5. Accessing and Testing****
 
