@@ -86,6 +86,9 @@ In order to make that happen:
 - The script needs to go there and start a webserver in that folder.
 - The script needs to assign an IP address that I can access from my phone's browser.
 
+I'm going to write the script, put it in the /config folder, and then come back here. See you soon, dear reader!
+
+
 *A webserver is *
 
 ****5. Accessing and Testing****
